@@ -1,0 +1,354 @@
+{% extends 'layout.html' %}
+      {% block body %}
+
+
+<!-- Data Section -->
+
+      <section class="text-gray-600 body-font">
+<!-- Data Section Heading -->
+        <div class="container px-5 pt-10 mx-auto">
+          <div class="text-center ">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Used Dataset</h1>
+            <div class="flex mt-3 justify-center">
+              <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mx-auto flex px-5 py-5 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-2xl text-xl mb-5 font-medium text-gray-900">Kaggle Fake and Real News Dataset 
+              <br class="hidden lg:inline-block">by 
+              <i>Clément Bisaillon</i> 
+            </h1>
+            <p class="mb-8 leading-relaxed">This dataset has <b>True.csv</b> and <b>Fake.csv</b> files wich contains True news and Fake news respectively. Both files has around <b>22000 of Unique News</b> and <b>4 Attributes</b> (i.e. Title, Text, Subject and Date). Combined size of both csv is 110.98 MB. </p>
+            <div class="flex justify-center">
+              <button href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset/" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"> <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset/" target="_blank"> Kaggle Dataset </a></button>
+            </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="{{ url_for('static', filename='data-set.PNG') }}">
+          </div>
+        </div>
+      </section>
+
+<hr>
+
+
+<!-- Woek-Flow-->
+      <section class="text-gray-600 bg-te body-font">
+<!-- Woek-Flow Heading -->
+        <div class="container px-5 pt-10 mx-auto">
+          <div class="text-center ">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Working-Flow</h1>
+            <div class="flex mt-3 justify-center">
+              <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container px-5 py-5 mx-auto flex flex-wrap">
+          <div class="flex flex-wrap w-full">
+            <div class="lg:w-2/4 md:w-1/2 md:pr-10 md:py-6">
+    <!-- STEP 1 -->       
+              <div class="flex relative pb-7">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                   
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 1 - Data Acquisition</h2>
+                  <p class="leading-relaxed">Downloaded the dataset from Kaggle, extracted the dataset.</p>
+                </div>
+              </div>
+    <!-- STEP 2 -->
+              <div class="flex relative pb-7">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 2 - Data Loading</h2>
+                  <p class="leading-relaxed">Loaded this dataset to Jupyter Notebook as a data frame (here in CSV format) using the Pandas module.</p>
+                </div>
+              </div>
+    <!-- STEP 3 -->
+              <div class="flex relative pb-7">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 3 - Data Preprocessing</h2>
+                  <p class="leading-relaxed">Performed certain data preprocessing operations to remove redundancy and get homogeneity. </p>
+                </div>
+              </div>
+    <!-- STEP 4 -->
+              <div class="flex relative pb-7">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                 
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z" />
+                   
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 4 - Data Cleaning</h2>
+                  <p class="leading-relaxed">
+                    Cleaned text data using Regex and some NLP methods like Lemmatization to get uniform and semantically meaningful text data for the next steps.</p>
+                </div>
+              </div>
+              
+    <!-- STEP 5 -->
+              <div class="flex relative pb-7">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
+                  
+                  </svg>
+                  
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 5 - Feature Extraction</h2>
+                  <p class="leading-relaxed">Kept necessary features and labels by dropping unnecessary data fields.</p>
+                </div>
+              </div>
+    <!-- STEP 6 -->
+            <div class="flex relative pb-7">
+              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                  
+                </svg>
+                
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 6 - Train-Test splitting</h2>
+                <p class="leading-relaxed">Dataset split into training and testing features and labels.</p>
+              </div>
+            </div>
+<!-- STEP 7 -->
+            <div class="flex relative pb-7">
+              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8"></path>
+                </svg>
+                
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 7 - Data Vectorizing</h2>
+                <p class="leading-relaxed">Text data can't be directly processed by ML models, So it is necessary to convert news text into vectors. Here TFIDF(Term Frequency Inverse Document Frequency) technique was used to vectorize data.</p>
+              </div>
+            </div>
+<!-- STEP 8 -->
+              <div class="flex relative pb-7">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 8 - Model Building</h2>
+                  <p class="leading-relaxed">Imported Logistic Regression, Decision Tree Classifier, Gradient Boosting Classifier, and Random Forest Classifier models from Sklearn module and built model by instantiating the object.</p>
+                </div>
+              </div>
+    <!-- STEP 9 -->
+              <div class="flex relative pb-7">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 9 - Training & Testing</h2>
+                  <p class="leading-relaxed">Trained and Tested previously instantiated model. Also measured various metrics like Accuracy, Precision, Recall, F1 score, Confusion Matrix, etc.</p>
+                </div>
+              </div>
+    <!-- STEP 10 -->
+              <div class="flex relative pb-7">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+    
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2h2m3-4H9a2 2 0 00-2 2v7a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-1m-1 4l-3 3m0 0l-3-3m3 3V3" />
+                    
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 10 - Pickle & Serialization</h2>
+                  <p class="leading-relaxed">Serialized the entire ML pipeline in the Pickle file by Joblib module so trained and tested models can be available to use anytime for predicting new data. </p>
+                </div>
+              </div>
+    <!-- STEP 11 -->
+              <div class="flex relative">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="12" cy="5" r="3"></circle>
+                    <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 11 - Model Deployment</h2>
+                  <p class="leading-relaxed">Created a web app using Flask as back-end and HTML, CSS as front-end stack. Connected web app with serialized ML models and deployed on Heroku </p>
+                </div>
+              </div>
+
+            </div>
+
+            <img class="lg:w-2/4 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" src="{{ url_for('static', filename='inanutshell.png') }}" alt="step">
+          </div>
+        </div>
+      </section>
+
+<hr>
+<!-- MODEL matrics Heading -->
+      <section class="text-gray-600 body-font">
+<!-- MODEL matrics Heading -->
+
+        <div class="container px-5 pt-10 mx-auto">
+          <div class="text-center ">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Matrics of Implemented Models</h1>
+            <div class="flex mt-3 justify-center">
+              <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container px-5 py-5 mx-auto">
+          <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            <table class="table-auto w-full text-left whitespace-nowrap">
+              <thead>
+                <tr>
+                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Model</th>
+                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Accuracy</th>
+                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Precision</th>
+                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Recall</th>
+                  <th class="w-10 mx-10 px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">F1 score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="px-4 py-3">Logistic  Regression</td>
+                  <td class="px-4 py-3 text-lg text-gray-900">0.9865</td>
+                  <td class="px-4 py-3">0.9846</td>
+                  <td class="px-4 py-3">0.9873</td>
+                  <td class="w-10 text-center">0.9859</td>
+                </tr>
+                <tr>
+                  <td class="border-t-2 border-gray-200 px-4 py-3">Decision Tree Classifier</td>
+                  <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">0.9960</td>
+                  <td class="border-t-2 border-gray-200 px-4 py-3">0.9970</td>
+                  <td class="border-t-2 border-gray-200 px-4 py-3">0.9948</td>
+                  <td class="border-t-2 border-gray-200 w-10 text-center">0.9959</td>
+                </tr>
+                <tr>
+                  <td class="border-t-2 border-gray-200 px-4 py-3">Gradient Boosting Classifier</td>
+                  <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">0.9950</td>
+                  <td class="border-t-2 border-gray-200 px-4 py-3">0.9915</td>
+                  <td class="border-t-2 border-gray-200 px-4 py-3">0.9983</td>
+                  <td class="border-t-2 border-gray-200 w-10 text-center">0.9948</td>
+                </tr>
+                <tr>
+                  <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Random Forest Classifier</td>
+                  <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">0.9917</td>
+                  <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">0.9930</td>
+                  <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">0.9897</td>
+                  <td class="border-t-2 border-b-2 border-gray-200 w-10 text-center">0.9913</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+      </section>
+
+      <hr>
+<!-- Confusion Matrix -->
+      <section class="text-gray-600 body-font">
+
+        <div class="container px-5 pt-10 mx-auto">
+            <div class="text-center ">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Confusion Matrix</h1>
+              <div class="flex mt-3 justify-center">
+                <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              </div>
+            </div>
+        </div>
+    
+    
+        <div class="container px-5 py-5 mx-auto">
+          <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-contain object-center h-full w-full" src="{{ url_for('static', filename='lr-cf.png') }}">
+              </div>
+              <h2 class="text-xl text-center font-medium title-font text-gray-900 mt-5">Logistic Regression</h2>
+              <p class="text-base text-center leading-relaxed mt-2">[[7423, 120],<br>[71, 6988]]</p>
+            </div>
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-contain object-center h-full w-full" src="{{ url_for('static', filename='dtc-cf.png') }}">
+              </div>
+              <h2 class="text-xl text-center font-medium title-font text-gray-900 mt-5">Decision Tree Classifier</h2>
+              <p class="text-base text-center leading-relaxed mt-2">[[7521, 22],<br>[40, 7019]]</p>
+            </div>
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-contain object-center h-full w-full" src="{{ url_for('static', filename='gdc-cf.png') }}">
+              </div>
+              <h2 class="text-xl text-center font-medium title-font text-gray-900 mt-5">Gradient Boosting Classifier</h2>
+              <p class="text-base text-center leading-relaxed mt-2">[[7423, 120],<br>[71, 6988]]</p>
+            </div>
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6">
+                <div class="rounded-lg h-64 overflow-hidden">
+                  <img alt="content" class="object-contain object-center h-full w-full" src="{{ url_for('static', filename='rfc-cf.png') }}">
+                </div>
+                <h2 class="text-xl text-center font-medium title-font text-gray-900 mt-5">Random Forest Classifier</h2>
+                <p class="text-base text-center leading-relaxed mt-2">[[7471, 72],<br>[53, 7006]]</p>
+            </div>
+    
+          </div>
+        </div>
+      </section>
+      {% endblock body %}

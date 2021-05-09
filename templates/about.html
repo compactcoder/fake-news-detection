@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+    {% block body %}
+        <section class="text-gray-600 body-font">
+
+            <div class="container px-5 pt-10 mx-auto">
+                <div class="text-center ">
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Our Team</h1>
+                  <div class="flex mt-3 justify-center">
+                    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="container px-5 py-5 pb-40 mx-auto">
+                
+                <div class="flex flex-wrap justify-center pb-3 -m-2">
+                    <div class="p-2 lg:w-1/4 md:w-1/2 w-full ">
+                        <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                          <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="{{ url_for('static', filename='prof_pic.jpg') }}">
+                          <div class="flex-grow">
+                            <h2 class="text-gray-900 title-font font-medium">Prof. Kunjal Tandel</h2>
+                            <p class="text-gray-500">Project Guide</p>
+                          </div>
+                        </div>
+                    </div>
+
+                </div>
+         
+            
+              <div class="flex flex-wrap -m-2">
+
+                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                    <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="{{ url_for('static', filename='bhavik_pic.png') }}">
+                    <div class="flex-grow">
+                      <h2 class="text-gray-900 title-font font-medium">Bhavik Koradiya</h2>
+                      <p class="text-gray-500"> Back-End Developing <br> Web-App Developing</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">  
+                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                    <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="{{ url_for('static', filename='rehana_pic.jpeg') }}">
+                    <div class="flex-grow">
+                      <h2 class="text-gray-900 title-font font-medium">Rehanakhatun Shaikh</h2>
+                      <p class="text-gray-500"> Data Cleaning <br> Data Preprocessing </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                    <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="{{ url_for('static', filename='aalok_pic.jpeg') }}">
+                    <div class="flex-grow">
+                      <h2 class="text-gray-900 title-font font-medium">Aalok Shah</h2>
+                      <p class="text-gray-500"> Graphics Designing <br> Front-End Developing </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                    <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="{{ url_for('static', filename='saurabh_pic.jpeg') }}">
+                    <div class="flex-grow">
+                      <h2 class="text-gray-900 title-font font-medium">Saurabh Singh</h2>
+                      <p class="text-gray-500">Deployment <br> Server Maintainance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+    {% endblock body %}

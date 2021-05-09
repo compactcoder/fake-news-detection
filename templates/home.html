@@ -1,0 +1,125 @@
+
+{% extends "layout.html" %}
+
+  {% block body %}
+
+<!-- Main Section -->
+<section class="text-gray-600 body-font relative">
+  <div class="container px-5 py-10 mx-auto">
+    <div class="flex flex-col text-center w-full mb-5">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Fake News Detection</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Trained ML model of over 25000 news articles published at the time of US Presidential Election-2016</p>
+    </div>
+      <!-- Form -->
+    <form action="{{ url_for('predict')}}" method="POST">
+
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap -m-2">
+    
+          <div class="p-2 w-full">
+            <div class="relative">
+
+              <label for="model" class="leading-7 text-sm text-gray-600">Select Classifier Algorithm</label>
+
+              <select type="text" id="model"  name="model" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+
+                <option value = "Logistic Regression" 
+                {% if enteredmodel == "Logistic Regression" %} selected {% endif %}> 
+                Logistic Regression 
+                </option>  
+
+                <option value = "Decision Tree Classifier" 
+                {% if enteredmodel == "Decision Tree Classifier" %} selected 
+                {% endif %}> 
+                Decision Tree Classifier 
+                </option>  
+
+                <option value = "Gradient Boosting Classifier" 
+                {% if enteredmodel == "Gradient Boosting Classifier" %} selected
+                {% endif %}>
+                Gradient Boosting Classifier 
+                </option>  
+
+                <option value = "Random Forest Classifier"
+                {% if enteredmodel == "Random Forest Classifier" %} selected
+                {% endif %}> Random Forest Classifier
+                </option>
+
+              </select>
+            </div>
+          </div> 
+
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="news" class="leading-7 text-sm text-gray-600">Enter News Here</label>
+              <textarea placeholder="Enter news here!!" id="news" name="news" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{enterednews}}</textarea>
+            </div>
+          </div>
+          
+          <div class="p-2 w-full">
+            <button type="submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 hover:bg-indigo-800  rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-80 text-lg">Predict</button>
+          </div>
+
+        </div>
+      </div>
+    </form>
+        
+<!-- forms end here -->
+
+      {% if prediction == 1 %}
+<!-- this is true -->
+    <div class="flex w-full max-w-sm mt-5 mx-auto overflow-hidden bg-white rounded-lg outline-None rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 bg-white-800">
+      <div class="flex items-center justify-center w-20 bg-green-500">
+
+        <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>          
+      </div>
+          
+      <div class="px-4 py-2 -mx-3">
+        <div class="mx-3">
+            <span class="font-semibold text-xl text-green-600 dark:text-red-400">Real News</span>
+            <p class="text-sm text-gray-600 dark:text-gray-200">Detected by {{ enteredmodel }}</p>
+        </div>
+      </div>
+    </div>
+
+
+      {% elif prediction == 0  %}
+<!-- this is fake -->
+
+    <div class="flex w-full max-w-sm mt-5 mx-auto overflow-hidden bg-white rounded-lg outline-None rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 bg-white-800">
+
+      <div class="flex items-center justify-center w-20 bg-red-500">
+        <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+      </div>
+      
+      <div class="px-4 py-2 -mx-3">
+        <div class="mx-3">
+          <span class="font-semibold text-xl text-red-500 dark:text-red-400">Fake News</span>
+          <p class="text-sm text-gray-600 dark:text-gray-200">Detected by {{ enteredmodel }}</p>
+        </div>
+      </div>
+    </div>
+
+      {% elif prediction == None  %}  
+<!--News is not entered  -->
+    <div class="container px-5 pt-8 mx-auto"></div>
+      <div class="xl:w-full lg:w-full w-full mx-auto text-center">
+        <p class="leading-relaxed text-lg">Please Enter News in Text-area</p> 
+        <span class="inline-block h-1 w-10 rounded bg-indigo-500"></span>
+
+      </div>
+    
+
+      {% else %}
+                   
+      {% endif %}
+         
+  </div>
+</section>
+
+              
+  {% endblock %}
